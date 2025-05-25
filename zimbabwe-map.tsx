@@ -120,6 +120,26 @@ export default function ZimbabweMap() {
   // Predefined Harare street coordinates using your exact coordinates
   const harareStreets = [
     {
+      lat: -17.82947099495703,
+      lng: 31.03297206710308,
+      name: "Samora Machel & Rekai Tangwena",
+    },
+    {
+      lat: -17.82808700394959,
+      lng: 31.042644348248828,
+      name: "Samora Machel & Chinhoyi Street",
+    },
+     {
+      lat: -17.829537809280037,
+      lng: 31.036162991613654,
+      name: "Along Samora Machel",
+    },
+    {
+      lat: -17.82875260784073,
+      lng: 31.039984432727266,
+      name: "Samora Machel & Prince Edward Street",
+    },
+    {
       name: "Fourth Street & Samora Machel",
       lat: -17.825256221161336,
       lng: 31.053645279078687,
