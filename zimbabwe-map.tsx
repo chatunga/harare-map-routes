@@ -140,6 +140,56 @@ export default function ZimbabweMap() {
       name: "Samora Machel & Prince Edward Street",
     },
     {
+      lat: -17.831388134460596,
+      lng: 31.031506752338114,
+      name: "Robert Mugabe & Rekai Tangwena",
+    },
+    {
+      lat: -17.833826847198637,
+      lng: 31.038702801196514,
+      name: "Robert Mugabe & Rotten Row",
+    },
+    {
+      lat: -17.83462926930266,
+      lng: 31.040704345115866,
+      name: "Robert Mugabe & Kaguvi Street",
+    },
+    {
+      lat: -17.834024582867183,
+      lng: 31.043380233134624,
+      name: "Robert Mugabe & Chinhoyi Street",
+    },
+    {
+      lat: -17.83321991818833,
+      lng: 31.046786363623845,
+      name: "Robert Mugabe & Julius Nyerere",
+    },
+    {
+      lat: -17.832020056416624,
+      lng: 31.051893058469954,
+      name: "Robert Mugabe & Second Street",
+    },
+    {
+      lat: -17.831234428255485,
+      lng: 31.05513913582268,
+      name: "Robert Mugabe & Fourth Street",
+    },
+     {
+      lat: -17.83083447076905,
+      lng: 31.056844701909625,
+      name: "Robert Mugabe & Fith Street",
+    },
+     {
+      lat: -17.830048837387462,
+      lng: 31.05878534597576,
+      name: "Eastlea Along Robert Mugabe",
+    },
+    {
+      lat: -17.830249603323722,
+      lng: 31.070259037311903,
+      name: "Robert Mugabe & Chiremba Road",
+    },
+    {
       name: "Fourth Street & Samora Machel",
       lat: -17.825256221161336,
       lng: 31.053645279078687,
