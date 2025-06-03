@@ -266,11 +266,63 @@ export default function ZimbabweMap() {
       lng: 31.05878534597576,
       name: "Eastlea Along Robert Mugabe",
     },
+    
     {
       lat: -17.830249603323722,
       lng: 31.070259037311903,
       name: "Robert Mugabe & Chiremba Road",
     },
+    {
+      lat: -17.830809090653446,
+      lng: 31.073415897713375,
+      name: "Robert Mugabe & Wheeler Road",
+    },
+    {
+      lat: -17.832026501830786,
+      lng: 31.08020230079796,
+      name: "Robert Mugabe & Daventry Road",
+    },
+    {
+      lat: -17.832167179924316,
+      lng: 31.08272020414782,
+      name: "Robert Mugabe (Past Daventry Road)",
+    },
+     {
+      lat: -17.833601007948843,
+      lng: 31.087488874320606,
+      name: "Robert Mugabe & Glenara Avenue",
+    },
+    {
+      lat: -17.834163714669387,
+      lng: 31.090472845607867,
+      name: "Robert Mugabe & Rhodeville Avenue",
+    },
+    {
+      lat: -17.834239463517314,
+      lng: 31.094155918648262,
+      name: "Robert Mugabe & Clyde Road",
+    },
+    {
+      lat: -17.834293569815596,
+      lng: 31.101743731211947,
+      name: "Robert Mugabe Near Cresta Oasis Hotel",
+    },
+    {
+      lat: -17.83402303816512,
+      lng: 31.102999840965058,
+      name: "Samora Machel & Mutare Road",
+    },
+    {
+      lat: -17.83593025243061,
+      lng: 31.104721571500164,
+      name: "Mutare Road & Coronation Avenue",
+    },
+    {
+      lat: -17.837053874820658,
+      lng: 31.109748884372213,
+      name: "Mutare Road & Msasa Road",
+    },
+    
     {
       name: "Fourth Street & Samora Machel",
       lat: -17.825256221161336,
@@ -396,10 +448,78 @@ export default function ZimbabweMap() {
       lng: 31.061614829325872,
       name: "Seke Road Waypoint 8(Seke & Pitch Drive)",
     },
-
+    {
+      lat: -17.84669092252243,
+      lng: 31.038354935681145,
+      name: "Simon Mazorodze Flyover",
+    },
+    {
+      lat: -17.85643204760046,
+      lng: 31.030548827952632,
+      name: "Simon Mazorodze & Paisley Road",
+    },
+    {
+      lat: -17.873406638391433,
+      lng: 31.019250513945174,
+      name: "Simon Mazorodze & Willowvale Road",
+    },
+    {
+      lat: -17.8854034077137,
+      lng: 31.010996208479863,
+      name: "Simon Mazorodze & Harare Drive",
+    },
     
 
-     
+  
+    {
+      lat: -17.860123456789012,
+      lng: 31.025678901234567,
+      name: "Simon Mazorodze & High Glen Road",
+    },
+
+
+    {
+      lat: -17.864567890123456,
+      lng: 31.020987654321098,
+      name: "Simon Mazorodze & Chitungwiza Road",
+    },
+    {
+      lat: -17.919967341962273,
+      lng: 30.98557967063123,
+      name: "Simon Mazorodze & Mbudzi Roundabout",
+    },
+    {
+      lat: -17.928620598601313,
+      lng: 30.979846476613893,
+      name: "Simon Mazorodze & Amalinda Road",
+    },
+    {
+      lat: -17.933555662617085,
+      lng: 30.979609607897334,
+      name: "Simon Mazorodze Glennora Area",
+    },
+    {
+      lat: -17.945493661612005,
+      lng: 30.978232082603718,
+      name: "Simon Mazorodze & Crest Turn Off",
+    },
+    {
+      lat: -17.960690706640456,
+      lng: 30.97646343575501,
+      name: "Simon Mazorodze Southlea Park Area",
+    },
+     {
+      lat: -17.969993577403468,
+      lng: 30.96983218063781,
+      name: "Skyline Tolgate, Beatrice Road",
+    },
+
+    {
+      lat: -17.980012239044573,
+      lng: 30.962011981585455,
+      name: "Beatrice Road & Lake Chivero",
+    },
+  
   ];
 
   useEffect(() => {
