@@ -125,6 +125,88 @@ export default function ZimbabweMap() {
       name: "Samora Machel & Rekai Tangwena",
     },
     {
+      lat: -17.82881997380518,
+      lng: 31.024048630131762,
+      name: "Samora Machel & Eddmonds Ave",
+    },
+    {
+      lat: -17.82732700350954,
+      lng: 31.01839090423796,
+      name: "Samora Machel Ave(Past Bishop Gaul)",
+    },
+    {
+      lat: -17.82887621074421,
+      lng: 31.008745650272534,
+      name: "Samora Machel Ave(Ok Marimba)",
+    },
+    {
+      lat: -17.825505695506266,
+      lng: 30.99518440168178,
+      name: "National Sports Statium Area",
+    },
+    {
+      lat: -17.824843165802598,
+      lng: 30.990030623613738,
+      name: "National Heros Acre Area",
+    },
+    {
+      lat: -17.82544829018807,
+      lng: 30.987139900438443,
+      name: "National Heros Acre Area & Westhood Road",
+    },
+     {
+      lat: -17.82551730899312,
+      lng: 30.982293843390384,
+      name: "National Heros Acre Area & Fourth Ave(Warren Park Area)",
+    },
+    {
+      lat: -17.823933171352614,
+      lng: 30.973959055116165,
+      name: "Warren Park Area Round About",
+    },
+    {
+      lat: -17.822620159801463,
+      lng: 30.967032853798898,
+      name: "Samora & Warren Park D Area",
+    },
+    {
+      lat: -17.821923087310637,
+      lng: 30.961039232873656,
+      name: "Samora & Tynwald Road",
+    },
+    {
+      lat: -17.820715666834218,
+      lng: 30.946346374833556,
+      name: "Samora Near Kuwadzana Round About",
+    },
+    {
+      lat: -17.820337988923196,
+      lng: 30.942372146059164,
+      name: "Kuwadzana Round About Waypoint 1",
+    },
+    {
+      lat: -17.820644462140613,
+      lng: 30.94182235201599,
+      name: "Kuwadzana Round About Waypoint 2",
+    },
+    {
+      lat: -17.82029322312824,
+      lng: 30.94121830198171,
+      name: "Kuwadzana Round About Waypoint 3",
+    },
+    {
+      lat: -17.81984383388764,
+      lng: 30.94092414540875,
+      name: "Bulawayo Road Past Kuwadzana Round About Waypoint 3",
+    },
+    {
+      lat: -17.819020827875118,
+      lng: 30.939267529111866,
+      name: "Bulawayo Road",
+    },
+    
+     , 
+    {
       lat: -17.82808700394959,
       lng: 31.042644348248828,
       name: "Samora Machel & Chinhoyi Street",
@@ -274,6 +356,50 @@ export default function ZimbabweMap() {
       lng: 31.052533088852343,
       name: "Kenneth Kaunda & Second Street",
     },
+    {
+      lat: -17.83955638987155,
+      lng: 31.048289621616533,
+      name: "Seke Road Waypoint 1",
+    },
+    {
+      lat: -17.843830965000635,
+      lng: 31.050405854056894,
+      name: "Seke Road Waypoint 2(ABC Auction Area)",
+    },
+    {
+      lat: -17.84734408376023,
+      lng: 31.05190421242289,
+      name: "Seke Road Waypoint 3(Spar Arcadia Area)",
+    },
+    {
+      lat: -17.852651845884584,
+      lng: 31.053550673723148,
+      name: "Seke Road Waypoint 4(Coca-Cola Area)",
+    },
+    {
+      lat: -17.855479958813152,
+      lng: 31.05481539004244,
+      name: "Seke Road Waypoint 5",
+    },
+    {
+      lat: -17.858014866675408,
+      lng: 31.056687016496042,
+      name: "Seke Road Waypoint 6",
+    },
+    {
+      lat: -17.86139633995347,
+      lng: 31.059011196749694,
+      name: "Seke Road Waypoint 7(Metro Hypermarket Area)",
+    },
+    {
+      lat: -17.865741780960484,
+      lng: 31.061614829325872,
+      name: "Seke Road Waypoint 8(Seke & Pitch Drive)",
+    },
+
+    
+
+     
   ];
 
   useEffect(() => {
