@@ -125,6 +125,16 @@ export default function ZimbabweMap() {
       name: "Samora Machel & Rekai Tangwena",
     },
     {
+      lat: -17.82808700394959,
+      lng: 31.04342163675031,
+      name: "Samora Machel & Chinhoyi Street",
+    },
+     {
+      lat: -17.831307496569124,
+      lng: 31.042644348248828,
+      name: "Chinhoyi Street & Jason Moyo Avenue",
+    },
+    {
       lat: -17.82881997380518,
       lng: 31.024048630131762,
       name: "Samora Machel & Eddmonds Ave",
@@ -204,11 +214,6 @@ export default function ZimbabweMap() {
       lng: 30.939267529111866,
       name: "Bulawayo Road",
     }, 
-    {
-      lat: -17.82808700394959,
-      lng: 31.042644348248828,
-      name: "Samora Machel & Chinhoyi Street",
-    },
      {
       lat: -17.829537809280037,
       lng: 31.036162991613654,
