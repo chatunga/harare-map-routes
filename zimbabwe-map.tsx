@@ -132,7 +132,7 @@ export default function ZimbabweMap() {
      {
       lat: -17.831307496569124,
       lng: 31.042644348248828,
-      name: "Chinhoyi Street & Jason Moyo Avenue",
+      name: "Chinhoyi Street & Jason Moyo Avenue..",
     },
     {
       lat: -17.82881997380518,
