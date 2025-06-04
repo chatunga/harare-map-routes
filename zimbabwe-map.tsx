@@ -203,9 +203,7 @@ export default function ZimbabweMap() {
       lat: -17.819020827875118,
       lng: 30.939267529111866,
       name: "Bulawayo Road",
-    },
-    
-     , 
+    }, 
     {
       lat: -17.82808700394959,
       lng: 31.042644348248828,
@@ -467,17 +465,12 @@ export default function ZimbabweMap() {
       lat: -17.8854034077137,
       lng: 31.010996208479863,
       name: "Simon Mazorodze & Harare Drive",
-    },
-    
-
-  
+    },  
     {
       lat: -17.860123456789012,
       lng: 31.025678901234567,
       name: "Simon Mazorodze & High Glen Road",
     },
-
-
     {
       lat: -17.864567890123456,
       lng: 31.020987654321098,
@@ -513,7 +506,6 @@ export default function ZimbabweMap() {
       lng: 30.96983218063781,
       name: "Skyline Tolgate, Beatrice Road",
     },
-
     {
       lat: -17.980012239044573,
       lng: 30.962011981585455,
