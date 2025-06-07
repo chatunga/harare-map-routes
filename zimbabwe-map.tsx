@@ -991,63 +991,45 @@ export default function ZimbabweMap() {
 
         {/* Controls */}
         <div className="space-y-6">
-          {/* Route Details */}
-          {routes.length > 0 && (
-            <Card>
-              <CardHeader>
-                <CardTitle>Route Breakdown</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {routes.map((route) => (
-                    <div key={route.id} className="space-y-2">
-                      <div className="flex items-center gap-2 font-medium">
-                        <div
-                          className="w-3 h-3 rounded-full"
-                          style={{ backgroundColor: route.color }}
-                        />
-                        <span className="text-sm">{route.name}</span>
-                      </div>
-                      <div className="space-y-1 ml-5">
-                        {route.waypoints.map((waypoint, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center gap-2 text-sm"
-                          >
-                            {index === 0 ? (
-                              <div
-                                className="w-4 h-4 rounded-full flex items-center justify-center text-white text-xs font-bold"
-                                style={{ backgroundColor: route.color }}
-                              >
-                                S
-                              </div>
-                            ) : index === route.waypoints.length - 1 ? (
-                              <div
-                                className="w-0 h-0 border-l-4 border-r-4 border-b-8 border-transparent"
-                                style={{ borderBottomColor: route.color }}
-                              />
-                            ) : (
-                              <div
-                                className="w-4 h-4 transform rotate-45 flex items-center justify-center"
-                                style={{ backgroundColor: route.color }}
-                              >
-                                <span className="transform -rotate-45 text-white text-xs font-bold">
-                                  {index}
-                                </span>
-                              </div>
-                            )}
-                            <span className="text-gray-700">
-                              {waypoint.name}
-                            </span>
-                          </div>
-                        ))}
+          
+          {/* Current Routes */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Current Routes</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                {routes.map((route) => (
+                  <div
+                    key={route.id}
+                    className="flex items-center justify-between p-3 border rounded-lg"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div
+                        className="w-4 h-4 rounded-full"
+                        style={{ backgroundColor: route.color }}
+                      />
+                      <div>
+                        <div className="font-medium">{route.name}</div>
+                        <div className="text-sm text-muted-foreground">
+                          {route.waypoints.length} waypoints:{" "}
+                          {route.waypoints[0]?.name} →{" "}
+                          {route.waypoints[route.waypoints.length - 1]?.name}
+                        </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          )}
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => removeRoute(route.id)}
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Add New Route */}
           <Card>
@@ -1178,45 +1160,63 @@ export default function ZimbabweMap() {
               </Button>
             </CardContent>
           </Card>
-
-          {/* Current Routes */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Current Routes</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                {routes.map((route) => (
-                  <div
-                    key={route.id}
-                    className="flex items-center justify-between p-3 border rounded-lg"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div
-                        className="w-4 h-4 rounded-full"
-                        style={{ backgroundColor: route.color }}
-                      />
-                      <div>
-                        <div className="font-medium">{route.name}</div>
-                        <div className="text-sm text-muted-foreground">
-                          {route.waypoints.length} waypoints:{" "}
-                          {route.waypoints[0]?.name} →{" "}
-                          {route.waypoints[route.waypoints.length - 1]?.name}
-                        </div>
+          {/* Route Details */}
+           {routes.length > 0 && (
+            <Card>
+              <CardHeader>
+                <CardTitle>Route Breakdown</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {routes.map((route) => (
+                    <div key={route.id} className="space-y-2">
+                      <div className="flex items-center gap-2 font-medium">
+                        <div
+                          className="w-3 h-3 rounded-full"
+                          style={{ backgroundColor: route.color }}
+                        />
+                        <span className="text-sm">{route.name}</span>
+                      </div>
+                      <div className="space-y-1 ml-5">
+                        {route.waypoints.map((waypoint, index) => (
+                          <div
+                            key={index}
+                            className="flex items-center gap-2 text-sm"
+                          >
+                            {index === 0 ? (
+                              <div
+                                className="w-4 h-4 rounded-full flex items-center justify-center text-white text-xs font-bold"
+                                style={{ backgroundColor: route.color }}
+                              >
+                                S
+                              </div>
+                            ) : index === route.waypoints.length - 1 ? (
+                              <div
+                                className="w-0 h-0 border-l-4 border-r-4 border-b-8 border-transparent"
+                                style={{ borderBottomColor: route.color }}
+                              />
+                            ) : (
+                              <div
+                                className="w-4 h-4 transform rotate-45 flex items-center justify-center"
+                                style={{ backgroundColor: route.color }}
+                              >
+                                <span className="transform -rotate-45 text-white text-xs font-bold">
+                                  {index}
+                                </span>
+                              </div>
+                            )}
+                            <span className="text-gray-700">
+                              {waypoint.name}
+                            </span>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => removeRoute(route.id)}
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </div>
       </div>
     </div>
