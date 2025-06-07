@@ -1,29 +1,29 @@
-"use client";
+"use client"
 
-import { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Trash2, Plus, MapPin } from "lucide-react";
+import { useEffect, useRef, useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Trash2, Plus, MapPin } from "lucide-react"
 
 // Define types for our routes and locations
 interface Location {
-  lat: number;
-  lng: number;
-  name: string;
+  lat: number
+  lng: number
+  name: string
 }
 
 interface Route {
-  id: string;
-  waypoints: Location[];
-  color: string;
-  name: string;
+  id: string
+  waypoints: Location[]
+  color: string
+  name: string
 }
 
 export default function ZimbabweMap() {
-  const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<any>(null);
+  const mapRef = useRef<HTMLDivElement>(null)
+  const mapInstanceRef = useRef<any>(null)
   const [routes, setRoutes] = useState<Route[]>([
     {
       id: "1",
@@ -92,19 +92,19 @@ export default function ZimbabweMap() {
       color: "#ef4444",
       name: "Complete Route: Samora & Fourth to Harare & Bank",
     },
-  ]);
+  ])
 
   const [newRoute, setNewRoute] = useState({
     waypoints: [] as Location[],
     color: "#10b981",
     name: "",
-  });
+  })
 
   const [currentWaypoint, setCurrentWaypoint] = useState({
     lat: "",
     lng: "",
     name: "",
-  });
+  })
 
   const colors = [
     "#ef4444", // red
@@ -115,7 +115,7 @@ export default function ZimbabweMap() {
     "#ec4899", // pink
     "#06b6d4", // cyan
     "#84cc16", // lime
-  ];
+  ]
 
   // Predefined Harare street coordinates using your exact coordinates
   const harareStreets = [
@@ -129,7 +129,7 @@ export default function ZimbabweMap() {
       lng: 31.04342163675031,
       name: "Samora Machel & Chinhoyi Street",
     },
-     {
+    {
       lat: -17.831307496569124,
       lng: 31.042644348248828,
       name: "Chinhoyi Street & Jason Moyo Avenue..",
@@ -164,7 +164,7 @@ export default function ZimbabweMap() {
       lng: 30.987139900438443,
       name: "National Heros Acre Area & Westhood Road",
     },
-     {
+    {
       lat: -17.82551730899312,
       lng: 30.982293843390384,
       name: "National Heros Acre Area & Fourth Ave(Warren Park Area)",
@@ -215,32 +215,32 @@ export default function ZimbabweMap() {
       name: "Bulawayo Road",
     },
     {
-      lat: -17.817319402546133, 
+      lat: -17.817319402546133,
       lng: 30.935107714257814,
       name: "Bulawayo Road, FBC Housing Area",
     },
     {
-      lat: -17.81948984543273, 
+      lat: -17.81948984543273,
       lng: 30.919294086443358,
       name: "Bulawayo Road & Robert Mugabe Way",
-    }, 
+    },
     {
-      lat: -17.82002282306269, 
+      lat: -17.82002282306269,
       lng: 30.897783450829316,
       name: "Pamuzinda Bulawayo Road",
     },
     {
-      lat: -17.819940826612527, 
+      lat: -17.819940826612527,
       lng: 30.89776191866231,
       name: "Pamuzinda Bulawayo Road",
     },
     {
-      lat: -17.821908731037947, 
+      lat: -17.821908731037947,
       lng: 30.8879217180406,
       name: "Whitehouse Bulawayo Road",
     },
 
-     {
+    {
       lat: -17.829537809280037,
       lng: 31.036162991613654,
       name: "Along Samora Machel",
@@ -285,17 +285,17 @@ export default function ZimbabweMap() {
       lng: 31.05513913582268,
       name: "Robert Mugabe & Fourth Street",
     },
-     {
+    {
       lat: -17.83083447076905,
       lng: 31.056844701909625,
       name: "Robert Mugabe & Fith Street",
     },
-     {
+    {
       lat: -17.830048837387462,
       lng: 31.05878534597576,
       name: "Eastlea Along Robert Mugabe",
     },
-    
+
     {
       lat: -17.830249603323722,
       lng: 31.070259037311903,
@@ -316,7 +316,7 @@ export default function ZimbabweMap() {
       lng: 31.08272020414782,
       name: "Robert Mugabe (Past Daventry Road)",
     },
-     {
+    {
       lat: -17.833601007948843,
       lng: 31.087488874320606,
       name: "Robert Mugabe & Glenara Avenue",
@@ -352,47 +352,47 @@ export default function ZimbabweMap() {
       name: "Mutare Road & Msasa Road",
     },
     {
-      lat: -17.838354858518386, 
+      lat: -17.838354858518386,
       lng: 31.116879355846663,
       name: "Mutare Road & Silvertone Road",
     },
     {
-      lat: -17.841342963461955, 
+      lat: -17.841342963461955,
       lng: 31.12668284365129,
       name: "Mutare Road & Citroen Road",
     },
     {
-      lat: -17.843649298750822, 
+      lat: -17.843649298750822,
       lng: 31.13257691668891,
       name: "Mutare Road & Harare Drive",
     },
     {
-      lat: -17.85003960750982, 
+      lat: -17.85003960750982,
       lng: 31.143338682627366,
       name: "Mutare Road (Feed Mix Pvt Area)",
     },
     {
-      lat: -17.8542343542236, 
+      lat: -17.8542343542236,
       lng: 31.162209217569266,
       name: "Mutare Road (Road Over rail Area)",
     },
     {
-      lat: -17.8567709477156, 
+      lat: -17.8567709477156,
       lng: 31.169359457229707,
       name: "Mutare Road & Donnybrook Drive(Mabvuku Turn Off)",
     },
     {
-      lat: -17.855280204906876,  
+      lat: -17.855280204906876,
       lng: 31.17000064600491,
       name: "Donnybrook Drive & Mabvuku Drive",
     },
     {
-      lat: -17.855903957076325,   
+      lat: -17.855903957076325,
       lng: 31.17192290997175,
       name: "Mabvuku Drive",
     },
     {
-      lat: -17.85170398353814,   
+      lat: -17.85170398353814,
       lng: 31.17429661476378,
       name: "Mabvuku Drive(Chizhanje Area)",
     },
@@ -522,19 +522,19 @@ export default function ZimbabweMap() {
       name: "Seke Road Waypoint 8(Seke & Pitch Drive)",
     },
     {
-      lat: -17.87168487913427, 
+      lat: -17.87168487913427,
       lng: 31.063979123053564,
       name: "Seke Road & Craneborne Avenue",
     },
     {
-      lat: -17.878383253278194, 
+      lat: -17.878383253278194,
       lng: 31.069976542392904,
       name: "Seke Road & St Davids Road",
     },
     {
-      lat: -17.890298791480614, 
+      lat: -17.890298791480614,
       lng: 31.069837067564485,
-      name: "Seke Road & Masotsha Ndlovu Way"
+      name: "Seke Road & Masotsha Ndlovu Way",
     },
     {
       lat: -17.899457845998917,
@@ -542,269 +542,267 @@ export default function ZimbabweMap() {
       name: "Seke Road & Mainway Meadows",
     },
     {
-      lat: -17.925072535943855, 
+      lat: -17.925072535943855,
       lng: 31.071427649021626,
       name: "Seke Road(Koala Park Area)",
     },
-     {
-      lat: -17.93761039189353, 
+    {
+      lat: -17.93761039189353,
       lng: 31.07092735021741,
       name: "Seke Road (CarzAuto Area)",
     },
-     {
-      lat: -17.94838563203268, 
+    {
+      lat: -17.94838563203268,
       lng: 31.0713473946526,
       name: "Seke Road Waypoint 9",
     },
-     {
-      lat: -17.955295970060476, 
+    {
+      lat: -17.955295970060476,
       lng: 31.07170402407588,
       name: "Seke Road & Delport Road",
     },
-     {
-      lat: -17.969584002070068, 
+    {
+      lat: -17.969584002070068,
       lng: 31.06739058248088,
       name: "Seke Road Waypoint 10",
     },
-     {
-      lat: -17.973584013409805, 
+    {
+      lat: -17.973584013409805,
       lng: 31.060194962960267,
       name: "Seke Road Waypoint 11",
     },
-     {
-      lat: -17.978634075362603, 
+    {
+      lat: -17.978634075362603,
       lng: 31.058391260834536,
       name: "Seke Road (Manayame Bridge Area)",
     },
-     {
-      lat: -17.9826873847265, 
+    {
+      lat: -17.9826873847265,
       lng: 31.057772790765608,
       name: "Seke Road (Manyame Phase 4 Area)",
     },
-     {
-      lat: -17.98400850574604,  
+    {
+      lat: -17.98400850574604,
       lng: 31.058542359539555,
       name: "Seke Road & Chaminuka Road",
     },
-     {
-      lat: -17.988061071985538,  
+    {
+      lat: -17.988061071985538,
       lng: 31.062812527509983,
       name: "Seke Road & Tsoka Road",
     },
-     {
-      lat: -17.997156991784887,  
+    {
+      lat: -17.997156991784887,
       lng: 31.07906680471399,
       name: "Seke Road (Traffic Interchange Area)",
     },
 
-
-     {
-      lat: -17.845401441757968, 
+    {
+      lat: -17.845401441757968,
       lng: 31.037960358151434,
       name: "Lytton Road and Rotten Row",
     },
     {
-      lat: -17.84991054578832, 
+      lat: -17.84991054578832,
       lng: 31.024696543274132,
       name: "Lytton Road and Parsley Road",
     },
-     {
-      lat: -17.854065551616017, 
+    {
+      lat: -17.854065551616017,
       lng: 31.01285261042387,
       name: "Lytton Road and Lobengula Street",
     },
     {
-      lat: -17.858959316631868,  
+      lat: -17.858959316631868,
       lng: 30.998715899977075,
       name: "Lytton Road close to Kambuzuma Road",
     },
     {
-      lat: -17.85274933675648, 
+      lat: -17.85274933675648,
       lng: 30.994495595138584,
       name: "Kambuzuma Road, Near Makoni Street",
     },
-     {
-      lat: -17.761922649905824,  
+    {
+      lat: -17.761922649905824,
       lng: 30.980619557688012,
       name: "Westgate Roundabout...",
     },
-     {
-      lat: -17.765429103820424,  
+    {
+      lat: -17.765429103820424,
       lng: 30.997823759440944,
       name: "Lomangundi Road and Harare Drive",
     },
-     {
-      lat: -17.766720938000635,   
+    {
+      lat: -17.766720938000635,
       lng: 30.999610929410192,
       name: "Lomangundi Road past Harare Drive",
     },
     {
-      lat: -17.774635781340173,    
+      lat: -17.774635781340173,
       lng: 31.00721178451939,
       name: "Lomangundi near Spar Greencroft",
     },
     {
-      lat: -17.778654583186658,    
+      lat: -17.778654583186658,
       lng: 31.026569203261744,
       name: "Lomangundi and Belfast Road",
     },
     {
-      lat: -17.78349342872135,     
+      lat: -17.78349342872135,
       lng: 31.03408392978526,
       name: "King George Road and Connaught Road",
     },
     {
-      lat: -17.806234934924653,     
+      lat: -17.806234934924653,
       lng: 31.039866503064054,
       name: "King George Road and Milton Road",
     },
-     {
-      lat: -17.817243467452343,      
+    {
+      lat: -17.817243467452343,
       lng: 31.042256573654416,
       name: "Leopold Takawira & Josiah Tongogara Street",
     },
     {
-      lat: -17.827513384928103,      
+      lat: -17.827513384928103,
       lng: 31.04494809458494,
       name: "Leopold Takawira & Samora Machel",
     },
     {
-      lat: -17.83035438856578,       
+      lat: -17.83035438856578,
       lng: 31.07028540949209,
       name: "Chiremba & Robert Mugabe",
     },
     {
-      lat: -17.840238240137882,        
+      lat: -17.840238240137882,
       lng: 31.068323711160343,
       name: "Chiremba Road past Horatio Avenue",
     },
     {
-      lat: -17.842691976790555,        
+      lat: -17.842691976790555,
       lng: 31.07089258724885,
       name: "Chiremba Road (Pick n Pay Area)",
     },
-     {
-      lat: -17.844809557952665,        
+    {
+      lat: -17.844809557952665,
       lng: 31.074529621396646,
       name: "Chiremba Road & Glenara Avenue",
     },
 
-     {
-      lat: -17.84711197869203,         
+    {
+      lat: -17.84711197869203,
       lng: 31.078051894725107,
       name: "Chiremba Road & Munro Road",
     },
-     {
-      lat: -17.85196881236657,         
+    {
+      lat: -17.85196881236657,
       lng: 31.084778642328267,
       name: "Chiremba Road & Dunmore Avenue",
     },
-     {
-      lat: -17.858342448378636,      
+    {
+      lat: -17.858342448378636,
       lng: 31.092535969943775,
       name: "Chiremba Road & George Road",
     },
-     {
-      lat: -17.865438642140592,        
+    {
+      lat: -17.865438642140592,
       lng: 31.106584208053853,
       name: "Chiremba Road & St Patrick's Road",
     },
-     {
-      lat: -17.865438642140592,        
+    {
+      lat: -17.865438642140592,
       lng: 31.106584208053853,
       name: "Chiremba Road & St Patrick's Road",
     },
-     {
-      lat: -17.877738647979147,         
+    {
+      lat: -17.877738647979147,
       lng: 31.121956601375746,
       name: "Chiremba Road (Solani Residence Area)",
     },
 
-     {
-      lat: -17.885785591891068,          
+    {
+      lat: -17.885785591891068,
       lng: 31.12379126468222,
       name: "Chiremba Road Before the Balancing Rocks Area",
     },
 
-     {
-      lat: -17.887316101716955,        
+    {
+      lat: -17.887316101716955,
       lng: 31.124416159217002,
       name: "Chiremba Road (Balancing Rocks Area)",
     },
-     {
-      lat: -17.89079243008665,          
+    {
+      lat: -17.89079243008665,
       lng: 31.13239698051309,
       name: "Chiremba Road near Munyuki Shops Turn Off",
     },
     {
-      lat: -17.890097839888753,           
+      lat: -17.890097839888753,
       lng: 31.140385884381104,
       name: "Epworth Jacha Turn Off",
     },
 
-    
-     {
-      lat: -17.826131655756374,           
+    {
+      lat: -17.826131655756374,
       lng: 31.0612188514467,
       name: "Enterprise Road & Nelson Mandela Avenue",
     },
     {
-      lat: -17.823162762984072,           
+      lat: -17.823162762984072,
       lng: 31.061855840452118,
       name: "Enterprise Road & Samora Machel",
     },
     {
-      lat: -17.817207850676052,           
+      lat: -17.817207850676052,
       lng: 31.065583146438318,
       name: "Entrprise Road and Hebert Chitepo Avenue",
     },
-     {
-      lat: -17.813607091927164,           
+    {
+      lat: -17.813607091927164,
       lng: 31.069245833279762,
       name: "Entrprise Road and Cummerland Road",
     },
-     {
-      lat: -17.810948421468908,           
+    {
+      lat: -17.810948421468908,
       lng: 31.07294374644038,
       name: "Entrprise Road and Victoria Avenue",
     },
-     {
-      lat: -17.802530609246144,            
+    {
+      lat: -17.802530609246144,
       lng: 31.08679436055817,
       name: "Entrprise Road and Argyll Road",
     },
     {
-      lat: -17.801173515294355,       
+      lat: -17.801173515294355,
       lng: 31.08821970053063,
       name: "Entrprise Road and Glenara Avenue",
     },
     {
-      lat: -17.79661212920221,            
+      lat: -17.79661212920221,
       lng: 31.099192738176825,
       name: "Entrprise Road and Acturus Road(Highland Park Area)",
     },
     {
-      lat: -17.795643157534375,            
+      lat: -17.795643157534375,
       lng: 31.101408990712418,
       name: "Entrprise Road and Pevensely Road",
     },
     {
-      lat: -17.790594354210256,             
+      lat: -17.790594354210256,
       lng: 31.10691513673755,
       name: "Entrprise Road and Kent Road",
     },
     {
-      lat: -17.784647512648387,             
+      lat: -17.784647512648387,
       lng: 31.11480895510632,
       name: "Entrprise Road Near Chisipite Shopping Center",
     },
-     {
-      lat: -17.782763270041876,             
+    {
+      lat: -17.782763270041876,
       lng: 31.11716089651057,
       name: "Entrprise Road & Drew Road",
     },
-     {
-      lat: -17.782354117597457,              
+    {
+      lat: -17.782354117597457,
       lng: 31.11907184896318,
       name: "Chisipite Shopping Center",
     },
@@ -827,7 +825,7 @@ export default function ZimbabweMap() {
       lat: -17.8854034077137,
       lng: 31.010996208479863,
       name: "Simon Mazorodze & Harare Drive",
-    },  
+    },
     {
       lat: -17.860123456789012,
       lng: 31.025678901234567,
@@ -863,7 +861,7 @@ export default function ZimbabweMap() {
       lng: 30.97646343575501,
       name: "Simon Mazorodze Southlea Park Area",
     },
-     {
+    {
       lat: -17.969993577403468,
       lng: 30.96983218063781,
       name: "Skyline Tolgate, Beatrice Road",
@@ -873,62 +871,57 @@ export default function ZimbabweMap() {
       lng: 30.962011981585455,
       name: "Beatrice Road & Lake Chivero",
     },
-  
-  ];
+  ]
 
   useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      mapRef.current &&
-      !mapInstanceRef.current
-    ) {
+    if (typeof window !== "undefined" && mapRef.current && !mapInstanceRef.current) {
       // Dynamically import Leaflet
       import("leaflet").then((L) => {
         // Initialize map centered on the route area
-        const map = L.map(mapRef.current!).setView([-17.833, 31.048], 14); // Centered on your route
+        const map = L.map(mapRef.current!).setView([-17.833, 31.048], 14) // Centered on your route
 
         // Add tile layer
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: "© OpenStreetMap contributors",
-        }).addTo(map);
+        }).addTo(map)
 
-        mapInstanceRef.current = map;
+        mapInstanceRef.current = map
 
         // Add CSS for Leaflet
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
-        document.head.appendChild(link);
+        const link = document.createElement("link")
+        link.rel = "stylesheet"
+        link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        document.head.appendChild(link)
 
         // Render initial routes
-        renderRoutes(map, L);
-      });
+        renderRoutes(map, L)
+      })
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
     if (mapInstanceRef.current && typeof window !== "undefined") {
       import("leaflet").then((L) => {
-        renderRoutes(mapInstanceRef.current, L);
-      });
+        renderRoutes(mapInstanceRef.current, L)
+      })
     }
-  }, [routes]);
+  }, [routes])
 
   const renderRoutes = (map: any, L: any) => {
     // Clear existing layers except the base tile layer
     map.eachLayer((layer: any) => {
       if (layer.options && (layer.options.color || layer.options.icon)) {
-        map.removeLayer(layer);
+        map.removeLayer(layer)
       }
-    });
+    })
 
     // Add routes with waypoints
     routes.forEach((route) => {
-      if (route.waypoints.length < 2) return;
+      if (route.waypoints.length < 2) return
 
       // Create markers for all waypoints
       route.waypoints.forEach((waypoint, index) => {
-        let icon;
+        let icon
         if (index === 0) {
           // Start point - large circle with number
           icon = L.divIcon({
@@ -936,7 +929,7 @@ export default function ZimbabweMap() {
             className: "custom-marker",
             iconSize: [22, 22],
             iconAnchor: [11, 11],
-          });
+          })
         } else if (index === route.waypoints.length - 1) {
           // End point - arrow with E
           icon = L.divIcon({
@@ -944,7 +937,7 @@ export default function ZimbabweMap() {
             className: "custom-marker",
             iconSize: [20, 20],
             iconAnchor: [10, 20],
-          });
+          })
         } else {
           // Waypoint - numbered diamond
           icon = L.divIcon({
@@ -952,7 +945,7 @@ export default function ZimbabweMap() {
             className: "custom-marker",
             iconSize: [16, 16],
             iconAnchor: [8, 8],
-          });
+          })
         }
 
         const marker = L.marker([waypoint.lat, waypoint.lng], { icon })
@@ -960,30 +953,26 @@ export default function ZimbabweMap() {
           .bindPopup(
             `<b>${waypoint.name}</b><br/>${route.name}<br/>Point ${
               index + 1
-            } of ${route.waypoints.length}<br/>Lat: ${waypoint.lat.toFixed(
-              6
-            )}<br/>Lng: ${waypoint.lng.toFixed(6)}`
-          );
-      });
+            } of ${route.waypoints.length}<br/>Lat: ${waypoint.lat.toFixed(6)}<br/>Lng: ${waypoint.lng.toFixed(6)}`,
+          )
+      })
 
       // Create polyline through all waypoints
-      const coordinates = route.waypoints.map((wp) => [wp.lat, wp.lng]);
+      const coordinates = route.waypoints.map((wp) => [wp.lat, wp.lng])
       const polyline = L.polyline(coordinates, {
         color: route.color,
         weight: 6,
         opacity: 0.8,
         dashArray: "10, 5",
-      }).addTo(map);
+      }).addTo(map)
 
-      polyline.bindPopup(
-        `<b>${route.name}</b><br/>${route.waypoints.length} waypoints`
-      );
+      polyline.bindPopup(`<b>${route.name}</b><br/>${route.waypoints.length} waypoints`)
 
       // Fit map to show the entire route
-      const group = new L.featureGroup([polyline]);
-      map.fitBounds(group.getBounds().pad(0.1));
-    });
-  };
+      const group = new L.featureGroup([polyline])
+      map.fitBounds(group.getBounds().pad(0.1))
+    })
+  }
 
   const addWaypoint = () => {
     if (currentWaypoint.lat && currentWaypoint.lng && currentWaypoint.name) {
@@ -991,19 +980,19 @@ export default function ZimbabweMap() {
         lat: Number.parseFloat(currentWaypoint.lat),
         lng: Number.parseFloat(currentWaypoint.lng),
         name: currentWaypoint.name,
-      };
+      }
       setNewRoute({
         ...newRoute,
         waypoints: [...newRoute.waypoints, waypoint],
-      });
-      setCurrentWaypoint({ lat: "", lng: "", name: "" });
+      })
+      setCurrentWaypoint({ lat: "", lng: "", name: "" })
     }
-  };
+  }
 
   const removeWaypoint = (index: number) => {
-    const updatedWaypoints = newRoute.waypoints.filter((_, i) => i !== index);
-    setNewRoute({ ...newRoute, waypoints: updatedWaypoints });
-  };
+    const updatedWaypoints = newRoute.waypoints.filter((_, i) => i !== index)
+    setNewRoute({ ...newRoute, waypoints: updatedWaypoints })
+  }
 
   const addRoute = () => {
     if (newRoute.waypoints.length >= 2 && newRoute.name) {
@@ -1012,73 +1001,53 @@ export default function ZimbabweMap() {
         waypoints: newRoute.waypoints,
         color: newRoute.color,
         name: newRoute.name,
-      };
+      }
 
-      setRoutes([...routes, route]);
+      setRoutes([...routes, route])
       setNewRoute({
         waypoints: [],
         color: colors[Math.floor(Math.random() * colors.length)],
         name: "",
-      });
+      })
     }
-  };
+  }
 
   const removeRoute = (id: string) => {
-    setRoutes(routes.filter((route) => route.id !== id));
-  };
+    setRoutes(routes.filter((route) => route.id !== id))
+  }
 
   const selectStreet = (street: any, isStart: boolean) => {
     setCurrentWaypoint({
       lat: street.lat.toString(),
       lng: street.lng.toString(),
       name: street.name,
-    });
-  };
+    })
+  }
 
   return (
     <div className="w-full max-w-7xl mx-auto p-4 space-y-6">
       <div className="text-center">
         <h1 className="text-3xl font-bold mb-2">Zimbabwe Street Map</h1>
-        <p className="text-muted-foreground">
-          Navigate Harare streets with custom route markings
-        </p>
+        <p className="text-muted-foreground">Navigate Harare streets with custom route markings</p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Map */}
-        <div className="lg:col-span-2">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <MapPin className="h-5 w-5" />
-                Harare City Center - Precise Route
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div
-                ref={mapRef}
-                className="w-full h-[500px] rounded-lg border"
-                style={{ minHeight: "500px" }}
-              />
-              <div className="mt-2 text-sm text-muted-foreground">
-                <p>
-                  • <strong>S</strong> = Start: Samora Machel & Fourth Street
-                </p>
-                <p>
-                  • <strong>1-5</strong> = Waypoints numbered in sequence
-                </p>
-                <p>
-                  • <strong>E</strong> = End: Harare Street & Bank Street
-                </p>
-                <p>• Red dashed line shows the complete route path</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+      <div className="space-y-6">
+        {/* Map - Full Width */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <MapPin className="h-5 w-5" />
+              Harare City Center - Precise Route
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div ref={mapRef} className="w-full h-[500px] rounded-lg border" style={{ minHeight: "500px" }} />
+            <div className="mt-2 text-sm text-muted-foreground"></div>
+          </CardContent>
+        </Card>
 
-        {/* Controls */}
-        <div className="space-y-6">
-          
+        {/* Controls - Below Map */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Current Routes */}
           <Card>
             <CardHeader>
@@ -1087,29 +1056,18 @@ export default function ZimbabweMap() {
             <CardContent>
               <div className="space-y-3">
                 {routes.map((route) => (
-                  <div
-                    key={route.id}
-                    className="flex items-center justify-between p-3 border rounded-lg"
-                  >
+                  <div key={route.id} className="flex items-center justify-between p-3 border rounded-lg">
                     <div className="flex items-center gap-3">
-                      <div
-                        className="w-4 h-4 rounded-full"
-                        style={{ backgroundColor: route.color }}
-                      />
+                      <div className="w-4 h-4 rounded-full" style={{ backgroundColor: route.color }} />
                       <div>
                         <div className="font-medium">{route.name}</div>
                         <div className="text-sm text-muted-foreground">
-                          {route.waypoints.length} waypoints:{" "}
-                          {route.waypoints[0]?.name} →{" "}
+                          {route.waypoints.length} waypoints: {route.waypoints[0]?.name} →{" "}
                           {route.waypoints[route.waypoints.length - 1]?.name}
                         </div>
                       </div>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => removeRoute(route.id)}
-                    >
+                    <Button variant="ghost" size="sm" onClick={() => removeRoute(route.id)}>
                       <Trash2 className="h-4 w-4" />
                     </Button>
                   </div>
@@ -1133,9 +1091,7 @@ export default function ZimbabweMap() {
                   id="routeName"
                   placeholder="e.g., Alternative Route"
                   value={newRoute.name}
-                  onChange={(e) =>
-                    setNewRoute({ ...newRoute, name: e.target.value })
-                  }
+                  onChange={(e) => setNewRoute({ ...newRoute, name: e.target.value })}
                 />
               </div>
 
@@ -1144,15 +1100,13 @@ export default function ZimbabweMap() {
                 <select
                   className="w-full p-2 border rounded-md"
                   onChange={(e) => {
-                    const street = harareStreets.find(
-                      (s) => s.name === e.target.value
-                    );
+                    const street = harareStreets.find((s) => s.name === e.target.value)
                     if (street) {
                       setCurrentWaypoint({
                         lat: street.lat.toString(),
                         lng: street.lng.toString(),
                         name: street.name,
-                      });
+                      })
                     }
                   }}
                   value={currentWaypoint.name}
@@ -1190,11 +1144,7 @@ export default function ZimbabweMap() {
                     }
                   />
                 </div>
-                <Button
-                  onClick={addWaypoint}
-                  variant="outline"
-                  className="w-full"
-                >
+                <Button onClick={addWaypoint} variant="outline" className="w-full">
                   Add Waypoint
                 </Button>
               </div>
@@ -1204,18 +1154,11 @@ export default function ZimbabweMap() {
                   <Label>Current Waypoints ({newRoute.waypoints.length})</Label>
                   <div className="max-h-32 overflow-y-auto space-y-1">
                     {newRoute.waypoints.map((waypoint, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center justify-between p-2 bg-gray-50 rounded text-sm"
-                      >
+                      <div key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded text-sm">
                         <span>
                           {index + 1}. {waypoint.name}
                         </span>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={() => removeWaypoint(index)}
-                        >
+                        <Button variant="ghost" size="sm" onClick={() => removeWaypoint(index)}>
                           <Trash2 className="h-3 w-3" />
                         </Button>
                       </div>
@@ -1231,9 +1174,7 @@ export default function ZimbabweMap() {
                     <button
                       key={color}
                       className={`w-8 h-8 rounded-full border-2 ${
-                        newRoute.color === color
-                          ? "border-gray-800"
-                          : "border-gray-300"
+                        newRoute.color === color ? "border-gray-800" : "border-gray-300"
                       }`}
                       style={{ backgroundColor: color }}
                       onClick={() => setNewRoute({ ...newRoute, color })}
@@ -1248,7 +1189,7 @@ export default function ZimbabweMap() {
             </CardContent>
           </Card>
           {/* Route Details */}
-           {routes.length > 0 && (
+          {routes.length > 0 && (
             <Card>
               <CardHeader>
                 <CardTitle>Route Breakdown</CardTitle>
@@ -1258,18 +1199,12 @@ export default function ZimbabweMap() {
                   {routes.map((route) => (
                     <div key={route.id} className="space-y-2">
                       <div className="flex items-center gap-2 font-medium">
-                        <div
-                          className="w-3 h-3 rounded-full"
-                          style={{ backgroundColor: route.color }}
-                        />
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: route.color }} />
                         <span className="text-sm">{route.name}</span>
                       </div>
                       <div className="space-y-1 ml-5">
                         {route.waypoints.map((waypoint, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center gap-2 text-sm"
-                          >
+                          <div key={index} className="flex items-center gap-2 text-sm">
                             {index === 0 ? (
                               <div
                                 className="w-4 h-4 rounded-full flex items-center justify-center text-white text-xs font-bold"
@@ -1287,14 +1222,10 @@ export default function ZimbabweMap() {
                                 className="w-4 h-4 transform rotate-45 flex items-center justify-center"
                                 style={{ backgroundColor: route.color }}
                               >
-                                <span className="transform -rotate-45 text-white text-xs font-bold">
-                                  {index}
-                                </span>
+                                <span className="transform -rotate-45 text-white text-xs font-bold">{index}</span>
                               </div>
                             )}
-                            <span className="text-gray-700">
-                              {waypoint.name}
-                            </span>
+                            <span className="text-gray-700">{waypoint.name}</span>
                           </div>
                         ))}
                       </div>
@@ -1307,5 +1238,5 @@ export default function ZimbabweMap() {
         </div>
       </div>
     </div>
-  );
+  )
 }
