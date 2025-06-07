@@ -213,7 +213,33 @@ export default function ZimbabweMap() {
       lat: -17.819020827875118,
       lng: 30.939267529111866,
       name: "Bulawayo Road",
+    },
+    {
+      lat: -17.817319402546133, 
+      lng: 30.935107714257814,
+      name: "Bulawayo Road, FBC Housing Area",
+    },
+    {
+      lat: -17.81948984543273, 
+      lng: 30.919294086443358,
+      name: "Bulawayo Road & Robert Mugabe Way",
     }, 
+    {
+      lat: -17.82002282306269, 
+      lng: 30.897783450829316,
+      name: "Pamuzinda Bulawayo Road",
+    },
+    {
+      lat: -17.819940826612527, 
+      lng: 30.89776191866231,
+      name: "Pamuzinda Bulawayo Road",
+    },
+    {
+      lat: -17.821908731037947, 
+      lng: 30.8879217180406,
+      name: "Whitehouse Bulawayo Road",
+    },
+
      {
       lat: -17.829537809280037,
       lng: 31.036162991613654,
@@ -325,7 +351,41 @@ export default function ZimbabweMap() {
       lng: 31.109748884372213,
       name: "Mutare Road & Msasa Road",
     },
-    
+    {
+      lat: -17.838354858518386, 
+      lng: 31.116879355846663,
+      name: "Mutare Road & Silvertone Road",
+    },
+    {
+      lat: -17.841342963461955, 
+      lng: 31.12668284365129,
+      name: "Mutare Road & Citroen Road",
+    },
+    {
+      lat: -17.843649298750822, 
+      lng: 31.13257691668891,
+      name: "Mutare Road & Harare Drive",
+    },
+    {
+      lat: -17.85003960750982, 
+      lng: 31.143338682627366,
+      name: "Mutare Road (Feed Mix Pvt Area)",
+    },
+    {
+      lat: -17.8542343542236, 
+      lng: 31.162209217569266,
+      name: "Mutare Road (Road Over rail Area)",
+    },
+    {
+      lat: -17.8567709477156, 
+      lng: 31.169359457229707,
+      name: "Mutare Road & Donnybrook Drive(Mabvuku Turn Off)",
+    },
+    {
+      lat: -17.855280204906876,  
+      lng: 31.17000064600491,
+      name: "Donnybrook Drive & Mabvuku Drive",
+    },
     {
       name: "Fourth Street & Samora Machel",
       lat: -17.825256221161336,
@@ -450,6 +510,216 @@ export default function ZimbabweMap() {
       lat: -17.865741780960484,
       lng: 31.061614829325872,
       name: "Seke Road Waypoint 8(Seke & Pitch Drive)",
+    },
+     {
+      lat: -17.845401441757968, 
+      lng: 31.037960358151434,
+      name: "Lytton Road and Rotten Row",
+    },
+    {
+      lat: -17.84991054578832, 
+      lng: 31.024696543274132,
+      name: "Lytton Road and Parsley Road",
+    },
+     {
+      lat: -17.854065551616017, 
+      lng: 31.01285261042387,
+      name: "Lytton Road and Lobengula Street",
+    },
+    {
+      lat: -17.858959316631868,  
+      lng: 30.998715899977075,
+      name: "Lytton Road close to Kambuzuma Road",
+    },
+    {
+      lat: -17.85274933675648, 
+      lng: 30.994495595138584,
+      name: "Kambuzuma Road, Near Makoni Street",
+    },
+     {
+      lat: -17.761922649905824,  
+      lng: 30.980619557688012,
+      name: "Westgate Roundabout...",
+    },
+     {
+      lat: -17.765429103820424,  
+      lng: 30.997823759440944,
+      name: "Lomangundi Road and Harare Drive",
+    },
+     {
+      lat: -17.766720938000635,   
+      lng: 30.999610929410192,
+      name: "Lomangundi Road past Harare Drive",
+    },
+    {
+      lat: -17.774635781340173,    
+      lng: 31.00721178451939,
+      name: "Lomangundi near Spar Greencroft",
+    },
+    {
+      lat: -17.778654583186658,    
+      lng: 31.026569203261744,
+      name: "Lomangundi and Belfast Road",
+    },
+    {
+      lat: -17.78349342872135,     
+      lng: 31.03408392978526,
+      name: "King George Road and Connaught Road",
+    },
+    {
+      lat: -17.806234934924653,     
+      lng: 31.039866503064054,
+      name: "King George Road and Milton Road",
+    },
+     {
+      lat: -17.817243467452343,      
+      lng: 31.042256573654416,
+      name: "Leopold Takawira & Josiah Tongogara Street",
+    },
+    {
+      lat: -17.827513384928103,      
+      lng: 31.04494809458494,
+      name: "Leopold Takawira & Samora Machel",
+    },
+    {
+      lat: -17.83035438856578,       
+      lng: 31.07028540949209,
+      name: "Chiremba & Robert Mugabe",
+    },
+    {
+      lat: -17.840238240137882,        
+      lng: 31.068323711160343,
+      name: "Chiremba Road past Horatio Avenue",
+    },
+    {
+      lat: -17.842691976790555,        
+      lng: 31.07089258724885,
+      name: "Chiremba Road (Pick n Pay Area)",
+    },
+     {
+      lat: -17.844809557952665,        
+      lng: 31.074529621396646,
+      name: "Chiremba Road & Glenara Avenue",
+    },
+
+     {
+      lat: -17.84711197869203,         
+      lng: 31.078051894725107,
+      name: "Chiremba Road & Munro Road",
+    },
+     {
+      lat: -17.85196881236657,         
+      lng: 31.084778642328267,
+      name: "Chiremba Road & Dunmore Avenue",
+    },
+     {
+      lat: -17.858342448378636,      
+      lng: 31.092535969943775,
+      name: "Chiremba Road & George Road",
+    },
+     {
+      lat: -17.865438642140592,        
+      lng: 31.106584208053853,
+      name: "Chiremba Road & St Patrick's Road",
+    },
+     {
+      lat: -17.865438642140592,        
+      lng: 31.106584208053853,
+      name: "Chiremba Road & St Patrick's Road",
+    },
+     {
+      lat: -17.877738647979147,         
+      lng: 31.121956601375746,
+      name: "Chiremba Road (Solani Residence Area)",
+    },
+
+     {
+      lat: -17.885785591891068,          
+      lng: 31.12379126468222,
+      name: "Chiremba Road Before the Balancing Rocks Area",
+    },
+
+     {
+      lat: -17.887316101716955,        
+      lng: 31.124416159217002,
+      name: "Chiremba Road (Balancing Rocks Area)",
+    },
+     {
+      lat: -17.89079243008665,          
+      lng: 31.13239698051309,
+      name: "Chiremba Road near Munyuki Shops Turn Off",
+    },
+    {
+      lat: -17.890097839888753,           
+      lng: 31.140385884381104,
+      name: "Epworth Jacha Turn Off",
+    },
+
+    
+     {
+      lat: -17.826131655756374,           
+      lng: 31.0612188514467,
+      name: "Enterprise Road & Nelson Mandela Avenue",
+    },
+    {
+      lat: -17.823162762984072,           
+      lng: 31.061855840452118,
+      name: "Enterprise Road & Samora Machel",
+    },
+    {
+      lat: -17.817207850676052,           
+      lng: 31.065583146438318,
+      name: "Entrprise Road and Hebert Chitepo Avenue",
+    },
+     {
+      lat: -17.813607091927164,           
+      lng: 31.069245833279762,
+      name: "Entrprise Road and Cummerland Road",
+    },
+     {
+      lat: -17.810948421468908,           
+      lng: 31.07294374644038,
+      name: "Entrprise Road and Victoria Avenue",
+    },
+     {
+      lat: -17.802530609246144,            
+      lng: 31.08679436055817,
+      name: "Entrprise Road and Argyll Road",
+    },
+    {
+      lat: -17.801173515294355,       
+      lng: 31.08821970053063,
+      name: "Entrprise Road and Glenara Avenue",
+    },
+    {
+      lat: -17.79661212920221,            
+      lng: 31.099192738176825,
+      name: "Entrprise Road and Acturus Road(Highland Park Area)",
+    },
+    {
+      lat: -17.795643157534375,            
+      lng: 31.101408990712418,
+      name: "Entrprise Road and Pevensely Road",
+    },
+    {
+      lat: -17.790594354210256,             
+      lng: 31.10691513673755,
+      name: "Entrprise Road and Kent Road",
+    },
+    {
+      lat: -17.784647512648387,             
+      lng: 31.11480895510632,
+      name: "Entrprise Road Near Chisipite Shopping Center",
+    },
+     {
+      lat: -17.782763270041876,             
+      lng: 31.11716089651057,
+      name: "Entrprise Road & Drew Road",
+    },
+     {
+      lat: -17.782354117597457,              
+      lng: 31.11907184896318,
+      name: "Chisipite Shopping Center",
     },
     {
       lat: -17.84669092252243,
