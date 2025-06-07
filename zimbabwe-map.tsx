@@ -387,6 +387,16 @@ export default function ZimbabweMap() {
       name: "Donnybrook Drive & Mabvuku Drive",
     },
     {
+      lat: -17.855903957076325,   
+      lng: 31.17192290997175,
+      name: "Mabvuku Drive",
+    },
+    {
+      lat: -17.85170398353814,   
+      lng: 31.17429661476378,
+      name: "Mabvuku Drive(Chizhanje Area)",
+    },
+    {
       name: "Fourth Street & Samora Machel",
       lat: -17.825256221161336,
       lng: 31.053645279078687,
