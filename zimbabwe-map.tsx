@@ -521,6 +521,83 @@ export default function ZimbabweMap() {
       lng: 31.061614829325872,
       name: "Seke Road Waypoint 8(Seke & Pitch Drive)",
     },
+    {
+      lat: -17.87168487913427, 
+      lng: 31.063979123053564,
+      name: "Seke Road & Craneborne Avenue",
+    },
+    {
+      lat: -17.878383253278194, 
+      lng: 31.069976542392904,
+      name: "Seke Road & St Davids Road",
+    },
+    {
+      lat: -17.890298791480614, 
+      lng: 31.069837067564485,
+      name: "Seke Road & Masotsha Ndlovu Way"
+    },
+    {
+      lat: -17.899457845998917,
+      lng: 31.0689357910297,
+      name: "Seke Road & Mainway Meadows",
+    },
+    {
+      lat: -17.925072535943855, 
+      lng: 31.071427649021626,
+      name: "Seke Road(Koala Park Area)",
+    },
+     {
+      lat: -17.93761039189353, 
+      lng: 31.07092735021741,
+      name: "Seke Road (CarzAuto Area)",
+    },
+     {
+      lat: -17.94838563203268, 
+      lng: 31.0713473946526,
+      name: "Seke Road Waypoint 9",
+    },
+     {
+      lat: -17.955295970060476, 
+      lng: 31.07170402407588,
+      name: "Seke Road & Delport Road",
+    },
+     {
+      lat: -17.969584002070068, 
+      lng: 31.06739058248088,
+      name: "Seke Road Waypoint 10",
+    },
+     {
+      lat: -17.973584013409805, 
+      lng: 31.060194962960267,
+      name: "Seke Road Waypoint 11",
+    },
+     {
+      lat: -17.978634075362603, 
+      lng: 31.058391260834536,
+      name: "Seke Road (Manayame Bridge Area)",
+    },
+     {
+      lat: -17.9826873847265, 
+      lng: 31.057772790765608,
+      name: "Seke Road (Manyame Phase 4 Area)",
+    },
+     {
+      lat: -17.98400850574604,  
+      lng: 31.058542359539555,
+      name: "Seke Road & Chaminuka Road",
+    },
+     {
+      lat: -17.988061071985538,  
+      lng: 31.062812527509983,
+      name: "Seke Road & Tsoka Road",
+    },
+     {
+      lat: -17.997156991784887,  
+      lng: 31.07906680471399,
+      name: "Seke Road (Traffic Interchange Area)",
+    },
+
+
      {
       lat: -17.845401441757968, 
       lng: 31.037960358151434,
